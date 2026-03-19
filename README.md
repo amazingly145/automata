@@ -1,2 +1,14 @@
 # automata
-Evidence 1 of the automata of the subject "Implementation of Computational Methods".Where it is implemented a Lexical Analysis, using a Determinstic Finite Automaton and Regular Expresions
+## Andrea Iliana Cantú Mayorga - A01753419
+
+## Description
+
+## Model of the solution
+
+## Implementation
+
+## Tests
+
+## Analysis
+
+## Reference
