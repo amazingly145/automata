@@ -41,3 +41,40 @@ movements(State, [Head|Tail]):-
 automaton(Word):-
     %we always start from q0, and move from there
     movements(q0,Word).
+
+%True Test cases
+%You get a positive(true) response in this test cases
+word_3ar:-
+    automaton([3,a,r]).
+
+word_echor:-
+    automaton([e,c,h,o,r]).
+
+word_echuir:-
+    automaton([e,c,h,u,i,r]).
+
+word_edhel:-
+    automaton([e,d,h,e,l]).
+
+word_edain:-
+    automaton([e,d,a,i,n]).
+
+true_testCase:-
+    word_3ar,
+    word_echor,
+    word_echuir,
+    word_edain,
+    word_edhel.
+
+test_all:-
+    word1,
+    word2,
+    word3,
+    word4,
+    word5.
+
+word1:- automaton([e_umlaut,a,r]).
+word2:- automaton([e,c,h,o,r]).
+word3:- automaton([e,c,h,u,i,r]).
+word4:- automaton([e,d,a,i,n]).
+word5:- automaton([e,d,h,e,l]).
