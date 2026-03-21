@@ -1,58 +1,43 @@
-%Maping/automaton states
+%Prologue implementation
 
-%Ear
-move(q0,q1);
-move(q0,q2);
-move(q0,q5); %death state
-move(q1,q3);
-move(q1,q5); %death state
-move(q3,q4); %final state Ear
-move(q3,q5); %death state
-move(q4,q5);
-move(q2,q6);
-move(q2,q15);
-move(q2,q10); %death state
-move(q6,q7);
-move(q6,q10); %death state
-move(q7,q8);
-move(q7,q11);
-move(q7,q10); %death state
-move(q8,q9); %final state Echor
-move(q8,q10); %death state
-move(q9,q10); %death state
-move(q11,q12);
-move(q11,q14): %death state
-move(q12,q13); %final state Echuir
-move(q12,q14); %death state
-move(q13,q14); %death state
-move(q15,q16);
-move(q15,q17);
-move(q15,q20); %death state
-move(q16,q18);
-move(q16,q20); %death state
-move(q18,q19);
-move(q18,q20); %death state
-move(q19,q20); %death state
-move(q17,q21); 
-move(q17,q23); %death state
-move(q21,q22); %final state
-move(q21,q23); %death state
-move(q22,q23); %death state
+%moves of the automaton
+%instead of using ë, we use 3
+move(q0,q1,3). 
+move(q0,q3,e).
+move(q1,q2,a).
+move(q2,q14,r). %Final state
+move(q3,q4,c).
+move(q3,q9,d).
+move(q4,q5,h).
+move(q5,q6,o).
+move(q5,q7,u).
+move(q6,q14,r). %Final state
+move(q7,q8,i).
+move(q8,q14,r). %Final state
+move(q9,q10,a).
+move(q9,q12,h).
+move(q10,q11,i).
+move(q11,q14,n). %Final state
+move(q12,q13,e). 
+move(q13,q14,l). %Final state
 
 
+%Final state, in which we reach the toggle final state.
+final_state(q14).
 
+%base case
+%we reach base case when we have gone through all the list
+%meaning that the list is empty and we have reached our final state q14
+movements(State, []):-
+    final_state(State).
 
-%Confirm states
-confirm_state(q4);
-confirm_state(q9);
-confirm_state(q13);
-confirm_state(q19);
-confirm_state(q22);
+%recursive
+movements(State, [Head|Tail]):-
+    %we get the first state starting from q0, and find the next state
+    move(State, NextState, Head),
+    %we move in the list
+    movements(NextState, Tail).
 
-%Not accepting state
-wrong_state(q5);
-wrong_state(q10);
-wrong_state(q14);
-wrong_state(q20);
-wrong_state(q23);
-
+automaton(Word):-
+    %we always start from q0, and move from there
+    movements(q0,Word).
