@@ -48,7 +48,7 @@ DFA. The first DFA that I designed, was not implemented in a very efficient ways
 are multiple states in which the string is rejected and there are multiple states that
 accepts this strings. One for each string:
 
-[!Automata_DFA] (DFA.png)
+![Automata_DFA](DFA.png)
 
 ### NFA
 A Non-Deterministic Finite Automaton, it can transition to multiple state 
