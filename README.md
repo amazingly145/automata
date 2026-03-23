@@ -1,4 +1,4 @@
-# automata
+# Evidence: 1 Implementation of Lexical Analysis
 Andrea Iliana Cantú Mayorga - A01753419
 
 ## Description
@@ -26,6 +26,32 @@ $\sum_{} = {ë,e,a,r,d,i,n,h,l,c,o,u}$
 Meaning that the automaton is going to reject other letters that are not defined in 
 the letters declared.
 ## Model of the solution
+### Finite automata
+Finite automata are abstract machines used to recognize patterns in input sequences, which
+is the basis for understanding regular languages used in computer science. There are two
+types of finite automata: Non-Deterministic Finite Automata (NFA) and Deterministic Finite 
+Automata (DFA). For this evidence I implemented a DFA, but it is necessary to understand
+both of them so that the implementation can go a lot smoother, and easy going.
+
+### DFA
+DFA's are finite state machines that accept or reject strings of character by passing them
+through a sequence that is uniquely determined by each string. The word "deterministic" 
+means that each state sequence is unique. In a DFA a string of symbols is passed through
+a DFA to see if it is accepted or not, Every input symbol moves to the next state 
+that can be determined on the automaton. These machines or automatons are also called 
+finite, because there is a limit to the number of states that it can reached.
+
+For this evidence I implemented a DFA because there **is a limited** number of states that
+it can be determined, and we have a series of letters that it can only accept the 
+automaton and we also have some patterns within this words that it can be modeled in this
+DFA. The first DFA that I designed, was not implemented in a very efficient ways as there
+are multiple states in which the string is rejected and there are multiple states that
+accepts this strings. One for each string:
+
+[!Automata_DFA] (DFA.png)
+
+### NFA
+A Non-Deterministic Finite Automaton, it can transition to multiple state 
 
 ## Implementation
 
