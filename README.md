@@ -26,6 +26,31 @@ $\sum_{} = {ë,e,a,r,d,i,n,h,l,c,o,u}$
 Meaning that the automaton is going to reject other letters that are not defined in 
 the letters declared.
 ## Model of the solution
+### Regular expresions
+Regular Expresions is a notation that helps us describe all the languages that can be 
+written in based of the language operators (JOIN, concatenation, Kleene concatenation, etc).
+And you have to apply the symbols of a certain alphabet. Regular expresions are built in
+a recursive way from the smallest regular expresions, each regular expresion denotes a 
+language *L(r)*, in which it is defined in a recuursive way, from the languages denotated
+from the subexpresions from *r*. This are the rules that define the expresions from a
+certain alphabet $\sum_{}:
+- *e* is a regular expresion, and L(e) it's {e}; the language in which the only member is an
+empty string
+- If *a* it's a symbol in $\sum_{}, then a it's a regular expresion, and L(*a*) = {*a*},
+meaning that the language from the string, with a longevity of one, with *a* in its only
+position-
+
+Since Kleene introduced the regular expresions with basic operators for the joins,
+concatenation and Kleene clousure in the decade of 1950, other expresions have been added
+to the regular expresions, so that we can improve the hability to specify the patterns 
+of strings, some of the symbols used in regular expressions are the following:
+
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Row 1    | Cell 2   | Cell 3   |
+| Row 2    | Cell 5   | Cell 6   |
+| Row 3    | Cell 8   | Cell 9   |
+
 ### Finite automata
 Finite automata are abstract machines used to recognize patterns in input sequences, which
 is the basis for understanding regular languages used in computer science. There are two
@@ -47,6 +72,12 @@ automaton and we also have some patterns within this words that it can be modele
 DFA. The first DFA that I designed, was not implemented in a very efficient ways as there
 are multiple states in which the string is rejected and there are multiple states that
 accepts this strings. One for each string:
+
+![Automata_DFA](DFA_before.png)
+
+Because this DFA is really big and there are a lot of Accepting and Rejecting states,
+it is much easier to code and simplify this DFA. I simplified this expesion, by having 
+the same 
 
 ![Automata_DFA](DFA.png)
 
