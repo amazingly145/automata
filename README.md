@@ -245,7 +245,129 @@ automaton(Word):-
     movements(q0,Word).
 ```
 ## Tests
+For the tests, I developed two tests: accepting and rejecting tests. Within this tests
+there are subgroups, each string is in a functionality and then there is a general,
+for each test. It is important that if you want to try the code, you will have to do it
+using lists directly in prolog.
+## Accepting tests
+For the accepting tests, there are only five accepting strings (3ar, echor, echuir,
+edhel, edain). Which are the ones specified at the beginning of this analysis. 
+For the individual tests, are the following:
+```prolog
+word_3ar:-
+    automaton([3,a,r]).
 
+word_echor:-
+    automaton([e,c,h,o,r]).
+
+word_echuir:-
+    automaton([e,c,h,u,i,r]).
+
+word_edhel:-
+    automaton([e,d,h,e,l]).
+
+word_edain:-
+    automaton([e,d,a,i,n]).
+```
+
+For the group test, it is the following, and the individual tests are implemented:
+```prolog
+true_testCase:-
+    write('Accepting automaton:'), nl,
+    word_3ar,
+    word_echor,
+    word_echuir,
+    word_edain,
+    word_edhel.
+```
+In all the cases you get a "true" or accepting case.
+## Rejected tests
+For the rejecting tests, there are more options of rejected strings, the implementation
+was done similar to the accepting tests. Using individual and group tests. For the
+individual tests:
+```prolog
+word_hello:-
+    automaton([h,e,l,l,o]).
+
+word_ear:-
+    automaton([e,a,r]).
+
+%3ar test cases
+word_3333ar:-
+    automaton([3,3,3,3,a,r]).
+
+word_3aaar:-
+    automaton([3,a,a,a,r]).
+
+word_3arr:-
+    automaton([3,a,r,r]).
+
+%echor test cases
+word_eeeechor:-
+    automaton([e,e,e,e,c,h,o,r]).
+
+word_eeeccchor:-
+    automaton([e,e,e,c,c,c,h,o,r]).
+
+word_echoooorr:-
+    automaton([e,c,h,o,o,o,o,r,r]).
+
+%echuir
+word_eeeechuir:-
+    automaton([e,e,e,e,c,h,u,i,r]).
+
+word_eccchuuuir:-
+    automaton([e,c,c,c,h,u,u,u,i,r]).
+
+word_echiiiirr:-
+    automaton([e,c,h,i,i,i,i,r,r]).
+
+%edhel
+word_edddel:-
+    automaton([e,d,d,d,e,l]).
+
+word_edhhhheeel:-
+    automaton([e,d,h,h,h,e,e,e,l]).
+
+word_eeeedhelllll:-
+    automaton([e,e,e,e,d,h,e,l,l,l,l,l]).
+
+%edain
+word_eddddain:-
+    automaton([e,d,d,d,a,i,n]).
+
+word_eeeeedaaiiin:-
+    automaton([e,e,e,e,e,d,a,a,i,i,i,n]).
+
+word_edainnnn:-
+    automaton([e,d,a,i,n,n,n,n]).
+```
+
+As you can see some strings have multiple number of letters to demonstrate the point of
+the automaton and its implementation. For the group rejecting tests, the indiviudal tests
+were implemented here:
+```prolog
+%We test all the negative cases
+false_testCase:-
+    write('Rejecting automaton:'), nl,
+    word_hello,
+    word_ear,
+    word_3333ar,
+    word_3aaar,
+    word_3arr,
+    word_eeeechor,
+    word_eeeccchor,
+    word_echoooorr,
+    word_eeeechuir,
+    word_eccchuuuir,
+    word_echiiiirr,
+    word_edddel,
+    word_edhhhheeel,
+    word_eeeedhelllll,
+    word_eddddain,
+    word_eeeeedaaiiin,
+    word_edainnnn.
+```
 ## Analysis
 
 ## Reference
