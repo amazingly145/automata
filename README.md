@@ -369,5 +369,10 @@ false_testCase:-
     word_edainnnn.
 ```
 ## Analysis
+Looking at the complexity of the program, because the facts of move do not grow. The
+complexity is of `O(n)`. And given that a DFA has a limited range the complexity keeps
+being `O(n)`.
 
 ## Reference
+Aho, A. V., Lam, M. S., Sethi, R., & Ullman, J. D. (2008). Compiladores: principios, técnicas y herramientas (2.ª ed.). Pearson Educación.
+ISBN: 978-970-26-1133-2
