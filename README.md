@@ -45,6 +45,7 @@ concatenation and Kleene clousure in the decade of 1950, other expresions have b
 to the regular expresions, so that we can improve the hability to specify the patterns 
 of strings, some of the symbols used in regular expressions are the following:
 
+| Regular Expressions (Regex)   |
 | Character | Meaning | Example |
 |:---------:|---------|---------|
 | `*` | Match **zero, one or more** of the previous | `A*` matches "Ahhhhh" or "A" |
@@ -58,6 +59,16 @@ of strings, some of the symbols used in regular expressions are the following:
 | `{ }` | Matches a specified **number of occurrences** of the previous | `[0-9]{3}` matches "315" but not "31" · `[0-9]{2,4}` matches "12", "123", and "1234" · `[0-9]{2,}` matches "1234567..." |
 | `^` | **Beginning** of a string. Or within a character range `[ ]` negation. | `^http` matches strings that begin with http, such as a url · `[^a-z]` matches any character not 0-9 |
 | `$` | **End** of a string. | `ing$` matches "exciting" but not "ingenious" |
+
+Having all the rules and symbols to develope a regular expresin, I was able to develope
+my own Regex, following some of the patterns, found from the analysis of the strings. The
+final solution was the following:
+`(E|Ë)(c|d|a)(h|a|r)|(o|u|i|e)|(r|n|l)`
+
+The expresion used in the sentence above, only accepts the strings given in the
+introduction area. To test my regex, you can use the following link, 
+that will guide you to a Regex tester, in which you can test a lot of strings:
+<https://regex101.com/>
 
 
 ### Finite automata
