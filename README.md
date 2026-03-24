@@ -208,8 +208,41 @@ move(q10,q11,i).
 move(q11,q14,n). %Final state
 move(q12,q13,e). 
 move(q13,q14,l). %Final state
+
+%Final state, in which we reach the toggle final state.
+final_state(q14).
+```
+After defining my "moves", I started to think in how it could be implemented, 
+I wrote a accepting fact where all the strings end or ar accepted, For this implementation 
+I thought about using a list. Because it is harder to manage it as a pure string and 
+it is easier to see it like a list. Having this analysis I thought about the base case,
+which in this case is when our list is empty but we have reached our acceptig state "q14"
+
+```prolog
+movements(State, []):-
+    final_state(State).
 ```
 
+Now that we have our base case, we can do the recursiveness, by having a list with head 
+and tail, and getting the state from every letter found, but done through the order of the 
+list and returning the Tail so we can have at the end our empty list:
+
+```prolog
+movements(State, [Head|Tail]):-
+    %we get the first state starting from q0, and find the next state
+    move(State, NextState, Head),
+    %we move in the list
+    movements(NextState, Tail).
+```
+
+Now that we have all our components, we do an exprression that can recieve the word, and
+because we are allways starting from q0. This is the initial state for every string
+we get from the user:
+```
+automaton(Word):-
+    %we always start from q0, and move from there
+    movements(q0,Word).
+```
 ## Tests
 
 ## Analysis
