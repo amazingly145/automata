@@ -140,8 +140,8 @@ DFA. The first DFA that I designed, was not implemented in a very efficient way 
 are multiple states in which the string is rejected and there are multiple states that
 accepts this strings. One for each string:
 
-![Automata_DFA1](DFA_before.png)
-*Frst DFA iteration*
+![Automata_DFA1](DFA_before.png) <br>
+*First DFA iteration*
 
 In this picture you can see the basis of the automaton, in which the other automaton
 is based on: 
