@@ -45,7 +45,7 @@ concatenation and Kleene clousure in the decade of 1950, other expresions have b
 to the regular expresions, so that we can improve the hability to specify the patterns 
 of strings, some of the symbols used in regular expressions are the following:
 
-| Regular Expressions (Regex)   |
+| Regular Expressions (Regex) |
 | Character | Meaning | Example |
 |:---------:|---------|---------|
 | `*` | Match **zero, one or more** of the previous | `A*` matches "Ahhhhh" or "A" |
@@ -62,12 +62,12 @@ of strings, some of the symbols used in regular expressions are the following:
 
 Having all the rules and symbols to develope a regular expresin, I was able to develope
 my own Regex, following some of the patterns, found from the analysis of the strings. The
-final solution was the following:
+final solution was the following: <br>
 `(E|Ë)(c|d|a)(h|a|r)|(o|u|i|e)|(r|n|l)`
 
 The expresion used in the sentence above, only accepts the strings given in the
 introduction area. To test my regex, you can use the following link, 
-that will guide you to a Regex tester, in which you can test a lot of strings:
+that will guide you to a Regex tester, in which you can test a lot of strings: <br>
 <https://regex101.com/>
 
 
