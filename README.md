@@ -51,6 +51,17 @@ of strings, some of the symbols used in regular expressions are the following:
 | Row 2    | Cell 5   | Cell 6   |
 | Row 3    | Cell 8   | Cell 9   |
 
+<table>
+  <tr>
+    <th colspan="2">Encabezado combinado</th>
+  </tr>
+  <tr>
+    <td>celda 1</td>
+    <td>celda 2</td>
+  </tr>
+</table>
+
+
 ### Finite automata
 Finite automata are abstract machines used to recognize patterns in input sequences, which
 is the basis for understanding regular languages used in computer science. There are two
