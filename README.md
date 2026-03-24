@@ -95,8 +95,8 @@ A Non-Deterministic Finite Automaton, it can transition to multiple states. They
 following characteristics:
 - A finite group S.
 - A group of input symbols $\Sigma$, the *input alphabet*. We supose that $\mathrm{e}$ that
-represents an empty string, will never be a member of $\Sigms$
-- A transition function that gives for each state and for each symbol in $\Sigms$, a group
+represents an empty string, will never be a member of $\Sigma$
+- A transition function that gives for each state and for each symbol in $\Sigma$, a group
 of the next states.
 - A state s_0 from S, that it distinguishes itself as the intial state.
 - A group of states *F*, a subgroup from S, that distinguish itself as the accepting states
