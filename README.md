@@ -163,6 +163,7 @@ Having my DFA, I developed a Dtran table or as I like to call it states tables. 
 it was used to guide the coding:
 **Transition table (Dtran)**
 | Origin-action | Destination |
+|---------------|-------------|
 | q0 E | q3 |
 | q0 Ë | q1 |
 | q1 a | q2 |
