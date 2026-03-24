@@ -45,21 +45,19 @@ concatenation and Kleene clousure in the decade of 1950, other expresions have b
 to the regular expresions, so that we can improve the hability to specify the patterns 
 of strings, some of the symbols used in regular expressions are the following:
 
-| Column 1 | Column 2 | Column 3 |
-|----------|----------|----------|
-| Row 1    | Cell 2   | Cell 3   |
-| Row 2    | Cell 5   | Cell 6   |
-| Row 3    | Cell 8   | Cell 9   |
-
-<table>
-  <tr>
-    <th colspan="2">Encabezado combinado</th>
-  </tr>
-  <tr>
-    <td>celda 1</td>
-    <td>celda 2</td>
-  </tr>
-</table>
+| Character | Meaning | Example |
+|:---------:|---------|---------|
+| `*` | Match **zero, one or more** of the previous | `A*` matches "Ahhhhh" or "A" |
+| `?` | Match **zero or one** of the previous | `Ab?` matches "A1" or "Ab" |
+| `+` | Match **one or more** of the previous | `Ab+` matches "Ab" or "Abbb" but not "A" |
+| `\` | Used to **escape** a special character | `Hungry\?` matches "Hungry?" |
+| `.` | Wildcard character, matches **any** character | `do.+` matches "dog", "door", "dot", etc. |
+| `( )` | **Group** characters | See example for `\|` |
+| `[ ]` | Matches a **range** of characters | `[cbr]at` matches "car", "bar", or "far" · `[0-9]+` matches any positive integer · `[a-zA-Z]` matches ascii letters a-z (uppercase and lower case) · `[^a-z]` matches any character not 0-9 |
+| `\|` | Match previous **OR** next character/group | `(Mon\|Tues)day` matches "Monday" or "Tuesday" |
+| `{ }` | Matches a specified **number of occurrences** of the previous | `[0-9]{3}` matches "315" but not "31" · `[0-9]{2,4}` matches "12", "123", and "1234" · `[0-9]{2,}` matches "1234567..." |
+| `^` | **Beginning** of a string. Or within a character range `[ ]` negation. | `^http` matches strings that begin with http, such as a url · `[^a-z]` matches any character not 0-9 |
+| `$` | **End** of a string. | `ing$` matches "exciting" but not "ingenious" |
 
 
 ### Finite automata
