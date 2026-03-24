@@ -239,7 +239,7 @@ movements(State, [Head|Tail]):-
 Now that we have all our components, we do an exprression that can recieve the word, and
 because we are allways starting from q0. This is the initial state for every string
 we get from the user:
-```
+```prolog
 automaton(Word):-
     %we always start from q0, and move from there
     movements(q0,Word).
