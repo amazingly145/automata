@@ -33,10 +33,10 @@ And you have to apply the symbols of a certain alphabet. Regular expresions are 
 a recursive way from the smallest regular expresions, each regular expresion denotes a 
 language *L(r)*, in which it is defined in a recuursive way, from the languages denotated
 from the subexpresions from *r*. This are the rules that define the expresions from a
-certain alphabet $\sum_{}:
+certain alphabet $\Sigma$:
 - *e* is a regular expresion, and L(e) it's {e}; the language in which the only member is an
 empty string
-- If *a* it's a symbol in $\sum_{}, then a it's a regular expresion, and L(*a*) = {*a*},
+- If *a* it's a symbol in $\Sigma$, then a it's a regular expresion, and L(*a*) = {*a*},
 meaning that the language from the string, with a longevity of one, with *a* in its only
 position-
 
